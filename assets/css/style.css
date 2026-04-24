@@ -1,0 +1,32 @@
+:root {
+    --bs-success: #1a7a4c;
+    --bs-success-rgb: 26, 122, 76;
+    --bs-warning: #f39c12;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar .nav-link {
+    margin: 0 5px;
+}
+
+.navbar .nav-link:hover {
+    color: var(--bs-success) !important;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.card {
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}

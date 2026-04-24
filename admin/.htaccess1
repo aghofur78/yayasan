@@ -1,0 +1,21 @@
+# Blokir akses langsung ke file .php selain index.php dan login.php
+<FilesMatch "\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "^(index|login|logout)\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Izinkan file di folder includes karena di-include
+<Files "header.php|footer.php|sidebar.php|auth.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Cegah akses file backup
+<FilesMatch "\.(bak|old|backup)$">
+    Deny from all
+</FilesMatch>
